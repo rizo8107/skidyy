@@ -41,3 +41,8 @@ yarn-error.log*
 *.mobileprovision
 *.orig.*
 web-build/
+
+# CMS
+/cms/
+.strapi-updater.json
+.strapi/

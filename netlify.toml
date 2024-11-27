@@ -1,7 +1,7 @@
 [build]
   command = "expo export:web"
   publish = "web-build"
-  
+
 [build.environment]
   NODE_VERSION = "18"
 
