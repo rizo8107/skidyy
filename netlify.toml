@@ -1,7 +1,6 @@
 [build]
   command = "CI= npm run build"
   publish = ".next"
-  ignore = "git diff --quiet HEAD^ HEAD ./cms/"
 
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
