@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
     "start": "expo start",
+    "lint": "next lint",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
@@ -42,6 +45,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@netlify/plugin-nextjs": "^5.8.1",
     "@types/react": "~18.2.14",
     "canvas": "^2.11.2",
     "typescript": "^5.1.3"
