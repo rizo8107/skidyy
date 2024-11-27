@@ -30,19 +30,15 @@ COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 
-# Set user for security
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-RUN chown -R nextjs:nodejs /app
-USER nextjs
-
-# Expose the port
-EXPOSE 3030
-
 # Set labels for container
 LABEL org.opencontainers.image.source="https://github.com/rizo8107/skidyy"
 LABEL org.opencontainers.image.description="SKiddy V2 Learning Platform"
 LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.vendor="rizo8107"
+LABEL org.opencontainers.image.visibility="public"
+
+# Expose the port
+EXPOSE 3030
 
 # Start the application
 CMD ["npm", "start"]
